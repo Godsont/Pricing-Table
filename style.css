@@ -1,0 +1,201 @@
+:root {
+    --dark-blue: #023047;
+    --green: #06D6A0;
+    --yellow: #FFD166;
+    --light-color: #F1FAEE;
+    --pink: #EF476F;
+}
+
+.pricing-table-container {
+    font-family: "Poppins", sans-serif;
+}
+
+.pricing-table-container .pricing-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-table-container h2 {
+    margin-right: 32px;
+    font-size: 24px;
+}
+
+.pricing-table-container .plans-switch {
+    width: 250px;
+    background: var(--dark-blue);
+    height: 55px;
+    appearance: none;
+    border-radius: 24px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.pricing-table-container .plans-switch-container {
+    position: relative;
+    color: #fff;
+    display: inline-block;
+}
+
+.pricing-table-container .plans-switch-container .monthly {
+    position: absolute;
+    left: 36px;
+    top: 18px;
+    pointer-events: none;
+}
+
+.pricing-table-container .plans-switch-container .yearly {
+    position: absolute;
+    right: 36px;
+    top: 18px;
+    pointer-events: none;
+}
+
+.pricing-table-container .plans-switch::before {
+    content: "";
+    position: absolute;
+    height: 44px;
+    width: 120px;
+    border-radius: 24px;
+    background: var(--green);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+    transition: all 0.5s;
+}
+
+.pricing-table-container .plans-switch:checked::before {
+    left: 138px;
+    width: 106px;
+}
+
+
+.pricing-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+
+.pricing-table .table {
+    background: var(--light-color);
+    width: 260px;
+    padding: 32px;
+    position: relative;
+}
+
+.pricing-table h3 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.pricing-table .price-container {
+    display: flex;
+    align-items: center;
+}
+
+.pricing-table .price-container .price {
+    font-size: 56px;
+    font-weight: bold;
+    padding-right: 16px;
+}
+
+.pricing-table .description {
+    font-size: 15px;
+    color: #222;
+}
+
+.pricing-table .features {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-table .features li {
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-table .features li::before {
+    content: url('images/check-icon.svg');
+    margin-right: 16px;
+    margin-top: 4px;
+}
+
+.pricing-table a.btn {
+    background: var(--dark-blue);
+    padding: 16px 0;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 24px;
+    margin-top: 16px;
+    transition: all 400ms;
+}
+
+.pricing-table a.btn:hover {
+    background: #022435;
+}
+
+
+.pricing-table .table img.table-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.pricing-table .table .content {
+    z-index: 200;
+    position: relative;
+}
+
+
+.pricing-table .table.best-value {
+    background: var(--dark-blue);
+    color: #fff;
+    border-radius: 24px;
+    width: 280px;
+}
+
+.pricing-table .table.table.best-value .value {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 8px;
+    border-radius: 24px 24px 0 0;
+    background: var(--pink);
+    font-weight: bold;
+}
+
+.pricing-table .table.table.best-value .content {
+    padding-top: 32px;
+}
+
+.pricing-table .table.table.best-value .price {
+    font-size: 68px;
+}
+
+.pricing-table .table.table.best-value a.btn {
+    background: var(--yellow);
+    color: #000;
+    transition: all 400ms;
+}
+
+.pricing-table .table.table.best-value a.btn:hover {
+    background: #ffe4a4;
+} 
+
+.pricing-table .table.best-value .description {
+    color: #eee;
+}
